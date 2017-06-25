@@ -1,3 +1,11 @@
-.body{
-	
+table{
+	width: 227px;
+	height: 227px
+}
+td{
+	padding: 1px;
+}
+
+.btn {
+	padding: 36px 45px 36px 36px;
 }
