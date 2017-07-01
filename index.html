@@ -11,15 +11,23 @@
 <div class="container text-center">
 	<h1>Tic Tac Toe</h1>
 	<div class="radio-inline" id="player">
+	<h2>Its a Two player Game</h2>
+	<!--
 		<h2>How do you want to play?</h2>
-		<label class="radio-inline"><input type="radio" name="player" id="p1" value="One Player" checked>One player</label>
-		<label class="radio-inline"><input type="radio" name="player" id="p2" value="Two Player">Two player</label>
+		<form>
+		<label class="radio-inline"><input onclick="getPlayer(value)" type="radio" name="player" id="p1" value="One" checked>One player</label>
+		<label class="radio-inline"><input onclick="getPlayer(value)" type="radio" name="player" id="p2" value="Two">Two player</label>
+		</form>
+
+	-->
 	</div>
 	<p id="sel-player"></p>
 	<div id="xo">
-		<h2>Would you like to be X or O?</h2>
-		<label class="radio-inline"><input type="radio" name="xo" value="O" id="O" checked>O</label>
-		<label class="radio-inline"><input type="radio" name="xo" value="X" id="X">X</label>
+		<h2>Player 1 would like to be X or O?</h2>
+		<form>
+		<label class="radio-inline"><input onclick="getXo(value)" type="radio" name="xo" value="O" id="O" checked>O</label>
+		<label class="radio-inline"><input onclick="getXo(value)" type="radio" name="xo" value="X" id="X">X</label>
+		</form>
 	</div>
 	<div class="board row">
 

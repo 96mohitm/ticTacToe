@@ -165,16 +165,18 @@ v8.addEventListener('click',function(){
 check();
 }
 
+var j;
+var win = document.querySelector("#winner");
+
 function check(){
-	var j;
 	//row
-	var win = document.querySelector("#winner");
+	
 	for(j=0;j<3;j++){
 		if(arr[j]==null||arr[j+3]==null||arr[j+6]==null)
 			continue;
 		if(arr[j]==arr[j+3]&&arr[j]==arr[j+6]){
 			console.log("WINNER");
-			win.innerContent="WON";
+			displayWinner();
 			return;
 		}
 
@@ -185,7 +187,7 @@ function check(){
 			continue;
 		if(arr[j]==arr[j+1]&&arr[j]==arr[j+2]){
 			console.log("WINNER");
-			win.innerText="WON";
+			displayWinner();
 			return;
 		}
 
@@ -193,13 +195,13 @@ function check(){
 	//diagonal
 	if(arr[0]==arr[4]&&arr[0]==arr[8]&&(arr[0]!=null||arr[4]!=null||arr[8]!=null)){
 		console.log("WINNER");
-		win.innerText="WON";
+		displayWinner();
 		return;
 	}
 
 	if(arr[2]==arr[4]&&arr[2]==arr[6]&&(arr[2]!=null||arr[4]!=null||arr[6]!=null)){
 		console.log("WINNER");
-		win.innerText="WON";
+		displayWinner();
 		return;
 	}
 
@@ -208,41 +210,42 @@ function check(){
 }
 
 function game(){
-	player();
-	symbol();
+	//player();
+	//symbol();
 	events();
 	check();
 	return;
 }
-
-function player(){
+var pl;
+function getPlayer(pl="One Player"){
 	//player selection
-	var player =document.getElementById("player");
-	var pl;
 	//var playerDisplay=document.getElementById("sel-player");
-
-	if (document.getElementById('p1').checked) {
-	  pl = document.getElementById('p1').value;
-	}
-	else if (document.getElementById('p1').checked) {
-	  pl = document.getElementById('p1').value;
-	}
 	//playerDisplay.innerHTML="";
 	console.log(pl);
 }
 
-function symbol(){
-	var opponent = document.getElementById("xo");
-	var op;
-	var playerDisplay = document.querySelector("#sel-player");
-	if (document.getElementById('O').checked) {
-	  op = document.getElementById('O').value;
-	}
-	else if (document.getElementById('X').checked) {
-	  op = document.getElementById('X').value;
-	}
+var op
+
+function getXo(op = "X"){
+	
 	console.log(op);
 
+}
+
+function displayWinner(){
+
+	if(arr[j]==0){
+		if(op==="X")
+			win.innerText="Player 2 WON!";
+		else
+			win.innerText="Player 1 WON!";
+	}
+	else {
+		if(op==="X")
+			win.innerText="Player 1 WON!";
+		else
+			win.innerText="Player 2 WON!";
+	}
 }
 
 game();
