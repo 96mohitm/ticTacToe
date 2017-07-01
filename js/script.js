@@ -195,15 +195,18 @@ function check(){
 	//diagonal
 	if(arr[0]==arr[4]&&arr[0]==arr[8]&&(arr[0]!=null||arr[4]!=null||arr[8]!=null)){
 		console.log("WINNER");
+		j=4;
 		displayWinner();
 		return;
 	}
 
 	if(arr[2]==arr[4]&&arr[2]==arr[6]&&(arr[2]!=null||arr[4]!=null||arr[6]!=null)){
 		console.log("WINNER");
+		j=4;
 		displayWinner();
 		return;
 	}
+
 
 
 	console.log(arr);
@@ -226,10 +229,9 @@ function getPlayer(pl="One Player"){
 
 var op
 
-function getXo(op = "X"){
-	
+function getXo(data = "X"){
+	op=data;
 	console.log(op);
-
 }
 
 function displayWinner(){
@@ -246,6 +248,11 @@ function displayWinner(){
 		else
 			win.innerText="Player 2 WON!";
 	}
+	setTimeout(ref ,2000);
+}
+
+function ref() {
+    location.reload();
 }
 
 game();
