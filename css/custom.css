@@ -13,3 +13,7 @@ td{
 #winner{
 	color:red;
 }
+
+body {
+  margin: 20px 20px 5px 5px;
+}
