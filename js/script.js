@@ -187,6 +187,19 @@ var j;
 var win = document.querySelector("#winner");
 
 function check(){
+
+	var k;
+	for(k=0;k<9;k++){
+		if(arr[k]==null)
+			break;
+		else
+			continue;
+	}
+	if(k==9){
+		win.innerText="Its a Draw!";
+		setTimeout(ref ,2000);
+	}
+
 	//row
 	
 	for(j=0;j<3;j++){
