@@ -15,6 +15,8 @@ console.log(v1);
 var i=-1;
 function events(){
 v0.addEventListener('click',function(){
+	if(arr[0]!=null)
+		return;
 	//v0.innerText="0";
 	i++;
 	if(i%2){
@@ -36,6 +38,8 @@ v0.addEventListener('click',function(){
 console.log(arr);
 
 v1.addEventListener('click',function(){
+	if(arr[1]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[1]=1;
@@ -52,6 +56,8 @@ v1.addEventListener('click',function(){
 });
 
 v2.addEventListener('click',function(){
+	if(arr[2]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[2]=1;
@@ -68,6 +74,8 @@ v2.addEventListener('click',function(){
 });
 
 v3.addEventListener('click',function(){
+	if(arr[3]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[3]=1;
@@ -84,6 +92,8 @@ v3.addEventListener('click',function(){
 });
 
 v4.addEventListener('click',function(){
+	if(arr[4]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[4]=1;
@@ -100,6 +110,8 @@ v4.addEventListener('click',function(){
 });
 
 v5.addEventListener('click',function(){
+	if(arr[5]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[5]=1;
@@ -116,6 +128,8 @@ v5.addEventListener('click',function(){
 });
 
 v6.addEventListener('click',function(){
+	if(arr[6]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[6]=1;
@@ -132,6 +146,8 @@ v6.addEventListener('click',function(){
 });
 
 v7.addEventListener('click',function(){
+	if(arr[7]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[7]=1;
@@ -148,6 +164,8 @@ v7.addEventListener('click',function(){
 });
 
 v8.addEventListener('click',function(){
+	if(arr[8]!=null)
+		return;
 	i++;
 	if(i%2){
 		arr[8]=1;
