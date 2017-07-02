@@ -183,6 +183,43 @@ v8.addEventListener('click',function(){
 check();
 }
 
+var myObj = {
+	b0:0,
+	b1:1,
+	b2:2,
+	b3:3,
+	b4:4,
+	b5:5,
+	b6:6,
+	b7:7,
+	b8:8,
+}
+
+var e=document.getElementById('board');
+
+function com_event(){
+	document.getElementById("board").addEventListener("click",function(e){
+		var x=e.target.id;
+		console.log(e);
+		var a=myObj[x];
+		if(arr[a]!=null)
+			return;
+		i++;
+		if(i%2){
+			arr[a]=1;
+			document.getElementById(x).innerText='X';
+			check();
+			return;
+		}
+		else{
+			arr[a]=0;
+			document.getElementById(x).innerText='O';
+			check();
+			return;
+		}
+	});
+}
+
 var j;
 var win = document.querySelector("#winner");
 
@@ -246,7 +283,8 @@ function check(){
 function game(){
 	//player();
 	//symbol();
-	events();
+	//events();
+	com_event()
 	check();
 	return;
 }
