@@ -9,3 +9,7 @@ td{
 .btn {
 	padding: 36px 45px 36px 36px;
 }
+
+#winner{
+	color:red;
+}
